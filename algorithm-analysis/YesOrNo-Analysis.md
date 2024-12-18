@@ -1,17 +1,29 @@
-## [Problem](https://www.codewars.com/kata/train/)
+## [Yes Or No](https://www.codewars.com/kata/53369039d7ab3ac506000467/)
 
-#### Java:
+#### Java: simple if condition | ternary operator
 ```java
-public class Solution {
-
+class YesOrNo {
+    public static String boolToWord(boolean b) {
+        if (!b) return "No";
+        return "Yes";
+    }
+}
+```
+```java
+class YesOrNo {
+    public static String boolToWord(boolean b) {
+        return b ? "Yes" : "No";
+    }
 }
 ```
 #### Tests:
 ```java
-public class SolutionTest {
-
+public class BoolTest {
     @Test
-  
+    public void testBoolToWord() {
+        assertEquals(YesOrNo.boolToWord(true),"Yes");
+        assertEquals(YesOrNo.boolToWord(false),"No");
+    }
 }
 ```
 
@@ -31,8 +43,7 @@ func solution() {
 
 ### Complexity Analysis:
 
-- *Time Complexity:* $O()$
-- *Space Complexity:* $O()$
-
+- *Time Complexity:* $O(1)$
+- *Space Complexity:* $O(1)$
 
 ---
