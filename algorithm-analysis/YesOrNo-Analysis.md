@@ -27,19 +27,25 @@ public class BoolTest {
 }
 ```
 
-<!-- #### Go:
+#### Go:
 ```go
-func solution() {
-
+func BoolToWord(word bool) string {
+	if !word {
+		return "No"
+	}
+	return "Yes"
 }
 ```
 
 #### Tests:
 ```go
-func solution() {
-
-}
-``` -->
+var _ = Describe("Test Example", func() {
+  It("should test that the solution returns the correct value", func() {
+    Expect(BoolToWord(true)).To(Equal("Yes"))
+    Expect(BoolToWord(false)).To(Equal("No"))
+  })
+})
+```
 
 ### Complexity Analysis:
 
